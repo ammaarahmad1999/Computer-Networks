@@ -1,0 +1,73 @@
+TECHNICAL INTERESTS
+• Machine Learning, Deep Learning, NLP, Competitive Programming, Software Development, Cryptography
+EDUCATION
+Year Degree / Certificate Institute / Board CGPA/Percentage
+2018 – Present B Tech Indian Institute of Technology Patna 8.58 (Current)
+2018 Senior secondary ISC board 88.4%
+2016 Secondary ICSE board 92.6%
+SKILLS
+•
+•
+•
+•
+•
+•
+Programming Languages: Proficient in C, C++, Java, Python
+Data Structures and Algorithms: Skilled in implementing in C++/C language.
+Competitive programming: Proficient in problem solving/sports Programming.
+Additional Courses Taken: Deep Learning Specialization from deeplearning.ai by Andrew Ng
+Database Management: Implementation in MySQL and familiar with all basics concepts of DBMS
+Object Oriented Programming: Familiar with basics of OOPs in JAVA
+PROJECTS
+RULE BASED CHATBOT FOR WOMEN AND CHILDREN: MINISTRY OF HOME AFFAIRS PROJECT
+Under Supervision of DR SOURAV KUMAR DANDAPAT
+• Objective: Chatbot to provide information and help regarding domestic violence and cybercrime cases against
+women and children
+• Concepts Used: Natural Language Processing, Python
+• Technique Used: NTLK - Wordnet and Pos_Tag, Regular Expression, Genisim - Word2Vec, Doc2Vec
+• Key Implementation: From User response on questions asked by chatbot determining the sections of Domestic Violence Act
+2005, Cyber Crime IT Act 2000 and IPC under which user may file a case in court.
+SMART LIFT PROBLEM
+Under Supervision of DR SOURAV KUMAR DANDAPAT
+• Objective: Developing efficient lift working Algorithm for optimization of energy consumption
+• Used Technology: C++
+• Key Implementation: Building has 10 floors. Gaussian distribution is used to find the number of people waiting to use the lift
+in each floor. Random selection of people from each floor who will use the lift at any point of time. There is a waiting time
+which starts as soon as there is at least 1 person in a lift at each floor. Lift moves only when it is full or waiting time is over.
+ASSEMBLER AND EMULATOR
+Under Supervision of DR JIMSON MATHEW HEAD OF DEPARTMENT IIT PATNA
+• Objective: Developing an assembler and emulator for small hypothetical assembly language with 2 registers, PC and SP
+• Assembly language has 19 instructions and each instruction is of 32 bits with 24:8 division of operand to opcode
+• Language Used: C++ (for assembler), C (for emulator)
+• Assembler: Two pass assembler: In first pass, checking for labels and errors related to it. In second pass, majority of errors are
+detected and machine code is generated and object file is created if no errors in assembly language code
+• Emulator: Four operations: Trace, before execution and after execution memory dump, and ISA. It executes the object file
+ACHIEVEMENTS
+• Codeforces: An expert (Blue) on Codeforces with Max Rating of 1724.
+• JEE Main: Bagged a rank of 3408 out of 10+ Lakhs Candidates in JEE Main 2018.
+• JEE Advanced: Bagged a rank of 2558 out of 2+ Lakhs Candidates in JEE Advanced 2018.
+COURSES COVERED
+•
+•
+•
+•
+Data Structures and Algorithms:
+Switching Theory (Digital Design):
+Computer Architecture:
+Database Management:
+09/10
+10/10
+09/10
+09/10
+•
+•
+•
+•
+Probability and Random Processes:
+Mathematics II & Mathematics III:
+Formal Language and Automata Theory:
+Discrete Mathematics:
+10/10
+10/10
+10/10
+09/10

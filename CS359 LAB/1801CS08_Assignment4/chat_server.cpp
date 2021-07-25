@@ -16,7 +16,51 @@
 using namespace std;
 #define MAX_BUFFER_SIZE 1024
 # define BUFSIZE 1024
-
+int check(string s)
+{
+	if(s.length()!=8)
+		return 0;
+	reverse(s.begin(), s.end())
+	A = (s[1]+s[3]+s[5]+s[7])%2;
+	B = (s[2]+s[3]+s[6]+s[7])%2;
+	C = (s[4]+s[5]+s[6]+s[7])%2;
+	int error = C*4+B*2+A;
+	return error;
+}
+string decode(string s)
+{
+	int pos=check(s);
+	reverse(s.begin(), s.end());
+	if(pos)
+		if(s[pos]=='1')
+			s[pos]=='0';
+		else
+			s[pos]=='1';
+	string code;
+	code+=s[7];
+	code+=s[6];
+	code+=s[5];
+	code+=s[3];
+	return code;
+}
+string encode(string s)
+{
+	string encode;
+	encode+=s[3];
+	encode+=s[2];
+	encode+=s[1];
+	int p4=(s[1]+s[2]+s[3])%2;
+	char p=p4+48;
+	encode+=p;
+	encode+=s[0];
+	int p2=(s[3]+s[2]+s[0])%2;
+	char p=p4+48;
+	encode+=p;
+	int p2=(s[3]+s[1]+s[0])%2;
+	char p=p4+48;
+	encode+=p;
+	encode+='0';
+}
 void error(string str) 
 {
 	cout<<"Error: "<<str<<endl;
@@ -220,7 +264,9 @@ int main(int argc, char ** argv)
 					cout<<"Error connecting to "<<personMessage2.first<<endl;
 				}
 				/* send the message line to the server */
-				name = myName + ":" + personMessage2.second;
+				//decrypted = decode(personMessage2.second)
+				//name = myName + ":" + decrytped;
+				name = myName + ":" + personMessage2.second
 				//const char *message = name.c_str();
 				char message[1024];
 				for (int i=0; i<name.length(); i++)

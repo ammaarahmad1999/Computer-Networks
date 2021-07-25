@@ -17,8 +17,6 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Port No not provided, Program terminated\n");
 		exit(1);
 	}
-	string ip = "127.0.0.1";
-    int port = 8080;
 	int sockfd, newsockfd, portno, n;			//n determines success or failure
 	char buffer [255];							//message
 	struct sockaddr_in serv_addr, cli_addr;		//Give internet address included in metinet
@@ -44,26 +42,41 @@ int main(int argc, char *argv[])
 	if (newsockfd < 0)
 		error("Error on Accept");
 
-	while(1)
+	int num1, num2, ans, choice;
+S:	n = write(newsockfd, "Enter Number 1 : ", strlen("Enter Number 1"));
+	if (n<0)
+			error("Error writing to socket");
+	read(newsockfd, &num1, sizeof(int));
+	printf("Client - Number 1 is : %d\n", num1);
+
+	n = write(newsockfd, "Enter Number 2 : ", strlen("Enter Number 2"));
+	if (n<0)
+			error("Error writing to socket");
+	read(newsockfd, &num2, sizeof(int));
+	printf("Client - Number 2 is : %d\n", num2);
+
+	char s[] = "Enter your choice : \n1. Addition\n2. Subtraction\n3. Exit";
+	n = write(newsockfd, s, strlen(s));
+	read(newsockfd, &choice, sizeof(int));
+	printf("Client - Choice is : %d\n", choice);
+
+	switch(choice)
 	{
-		bzero (buffer, 255);					//Clearing buffer
-		n = read(newsockfd, buffer, 255);
-		if (n<0)
-			error ("Error on reading.");
-		printf("Client : %s\n", buffer);
-		fgets(buffer, 255, stdin);
-		n = write(newsockfd, buffer, strlen(buffer));
-
-		if (n<0)
-			error ("Error on writing");
-
-		int i = strncmp("Bye", buffer, 3);
-		if (i==0)
+		case 1:
+			ans = num1+num2;
 			break;
-
+		case 2:
+			ans = num1-num2;
+			break;
+		case 3:
+			goto Q;
+			break;
 	}
+	write(newsockfd, &ans, sizeof(int));
+	if(choice != 3)
+		goto S;
 
-	close(newsockfd);
+Q:	close(newsockfd);
 	close(sockfd);
 	return 0;
 }
